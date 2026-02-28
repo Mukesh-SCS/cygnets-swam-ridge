@@ -45,7 +45,7 @@ cygnets-swam-ridge/
 │   ├── css/                # main.css, variables, layout, components, reset
 │   ├── js/                 # nav.js, forms.js, harvest-updates.js
 │   └── images/
-│       ├── logo/           # Updated_logo.png (site logo)
+│       ├── logo/           # Updated_logo_nobg.png (transparent logo)
 │       ├── blackberries/
 │       ├── farm/
 │       ├── raspberries/
@@ -90,7 +90,7 @@ To stop the server: press **Ctrl+C** in the terminal, or kill the process using 
 
 ## Logo
 
-Site logo: `assets/images/logo/Updated_logo.png`. Used in header (top-left) and home hero (large, prominent).
+Site logo: `assets/images/logo/Updated_logo_nobg.png` (transparent background).
 
 ---
 
