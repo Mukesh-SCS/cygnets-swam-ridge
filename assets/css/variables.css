@@ -1,0 +1,39 @@
+/* Cygnet's Swan Ridge — Design Tokens */
+:root {
+  /* Colours — light premium theme */
+  --color-bg: #faf9f6;
+  --color-bg-warm: #f5f3ef;
+  --color-bg-card: #ffffff;
+  --color-heading: #1a2744;
+  --color-body: #3d4a5c;
+  --color-body-muted: #6b7785;
+  --color-accent: #0d9488;
+  --color-accent-hover: #0f766e;
+  --color-accent-light: #ccfbf1;
+  --color-border: #e5e3de;
+  --color-link: #0d9488;
+  --color-link-hover: #0f766e;
+
+  /* Typography */
+  --font-heading: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --font-body: "Inter", "Open Sans", system-ui, sans-serif;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+
+  /* Layout */
+  --max-width: 1200px;
+  --max-width-narrow: 720px;
+  --header-height: 80px;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --shadow: 0 2px 12px rgba(26, 39, 68, 0.06);
+  --shadow-lg: 0 8px 32px rgba(26, 39, 68, 0.08);
+}

@@ -1,0 +1,28 @@
+{
+  "varieties": [
+    {
+      "id": "chester",
+      "name": "Chester Thornless Blackberry",
+      "description": "Late-season variety with firm fruit, deep colour, and excellent handling and shelf life.",
+      "features": [
+        "Thornless canes",
+        "Firm fruit, good shelf life",
+        "Consistent size",
+        "Great for farm gate, wholesale, and delivery"
+      ],
+      "image": "assets/images/blackberries/Blac_1.jpg"
+    },
+    {
+      "id": "cluster",
+      "name": "Cluster Thornless Blackberry",
+      "description": "Cluster fruiting with uniform presentation and strong productivity.",
+      "features": [
+        "Thornless production",
+        "Cluster-based fruiting",
+        "Strong productivity",
+        "Fresh market focused"
+      ],
+      "image": "assets/images/blackberries/Black_2.jpg"
+    }
+  ]
+}
