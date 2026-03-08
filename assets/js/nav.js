@@ -42,4 +42,16 @@ document.addEventListener('DOMContentLoaded', function() {
       a.classList.remove('active');
     }
   });
+
+  // Header scroll effect
+  var header = document.querySelector('.site-header');
+  if (header) {
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 50) {
+        header.classList.add('is-scrolled');
+      } else {
+        header.classList.remove('is-scrolled');
+      }
+    }, { passive: true });
+  }
 });

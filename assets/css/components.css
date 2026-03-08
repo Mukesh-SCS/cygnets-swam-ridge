@@ -591,3 +591,271 @@
   color: var(--color-body-muted);
   line-height: 1.5;
 }
+
+/* ===== SOCIAL SIDEBAR ===== */
+.social-sidebar {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.social-sidebar a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--color-bg-card);
+  color: var(--color-body-muted);
+  border: 1px solid var(--color-border-light);
+  border-left: none;
+  transition: all var(--transition);
+  position: relative;
+}
+
+.social-sidebar a:first-child {
+  border-radius: 0 var(--radius) 0 0;
+}
+
+.social-sidebar a:last-child {
+  border-radius: 0 0 var(--radius) 0;
+}
+
+.social-sidebar a svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  transition: transform var(--transition);
+}
+
+.social-sidebar a:hover {
+  width: 56px;
+  color: #fff;
+}
+
+.social-sidebar a:hover svg {
+  transform: scale(1.15);
+}
+
+.social-sidebar a.social-facebook:hover {
+  background: #1877F2;
+  border-color: #1877F2;
+}
+
+.social-sidebar a.social-instagram:hover {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  border-color: #dc2743;
+}
+
+@media (max-width: 768px) {
+  .social-sidebar {
+    left: auto;
+    right: 0;
+    top: auto;
+    bottom: 0;
+    transform: none;
+    flex-direction: row;
+    width: 100%;
+    border-top: 1px solid var(--color-border-light);
+  }
+
+  .social-sidebar a {
+    flex: 1;
+    width: auto;
+    height: 44px;
+    border: none;
+    border-radius: 0;
+    border-right: 1px solid var(--color-border-light);
+    background: rgba(255, 254, 251, 0.96);
+    backdrop-filter: blur(8px);
+  }
+
+  .social-sidebar a:last-child {
+    border-right: none;
+    border-radius: 0;
+  }
+
+  .social-sidebar a:first-child {
+    border-radius: 0;
+  }
+
+  .social-sidebar a:hover {
+    width: auto;
+  }
+}
+
+/* ===== FOOTER SOCIAL ICONS ===== */
+.footer-social {
+  display: flex;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  color: #c4bfb5;
+  transition: all var(--transition);
+}
+
+.footer-social a:hover {
+  transform: translateY(-3px);
+}
+
+.footer-social a.social-facebook:hover {
+  background: #1877F2;
+  color: #fff;
+}
+
+.footer-social a.social-instagram:hover {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: #fff;
+}
+
+.footer-social a svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+/* ===== SCROLL REVEAL ANIMATIONS ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+}
+
+.reveal-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+}
+
+.reveal-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+}
+
+.reveal-scale.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger children */
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s var(--ease-out), transform 0.5s var(--ease-out);
+}
+
+.reveal-stagger.is-visible > *:nth-child(1) { transition-delay: 0s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.is-visible > *:nth-child(2) { transition-delay: 0.1s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.is-visible > *:nth-child(3) { transition-delay: 0.2s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.is-visible > *:nth-child(4) { transition-delay: 0.3s; opacity: 1; transform: translateY(0); }
+
+/* ===== MODERN ENHANCEMENTS ===== */
+
+/* Gradient text accent utility */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-farm-green) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animated underline on links */
+.animated-link {
+  position: relative;
+  display: inline-block;
+}
+
+.animated-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-accent);
+  transition: width var(--transition);
+}
+
+.animated-link:hover::after {
+  width: 100%;
+}
+
+/* Modern section divider */
+.section-divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-farm-green));
+  border: none;
+  margin: var(--space-md) auto var(--space-xl);
+  border-radius: 2px;
+}
+
+/* Enhanced card hover with glow */
+.card--glow:hover {
+  box-shadow: var(--shadow-lg), 0 0 40px var(--color-accent-subtle);
+}
+
+/* Smooth image zoom on variety cards */
+.variety-card__image-wrap img {
+  transition: transform 0.6s var(--ease-out);
+}
+
+.variety-card:hover .variety-card__image-wrap img {
+  transform: scale(1.05);
+}
+
+/* Better offer tile interactivity */
+.offer-tile {
+  cursor: pointer;
+}
+
+.offer-tile h3 {
+  transition: color var(--transition);
+}
+
+.offer-tile:hover h3 {
+  color: var(--color-accent);
+}
+
+/* Responsive padding for mobile bottom bar */
+@media (max-width: 768px) {
+  .site-footer {
+    padding-bottom: calc(var(--space-xl) + 52px);
+  }
+}
